@@ -1,0 +1,390 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500,700);
+@import url(https://fonts.googleapis.com/css?family=Comfortaa:700);
+body {
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-y: hidden;
+    color: #797979;
+    background-color: #e5e5e5;
+}
+
+.b-bg-1 {
+    /*    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+    background: url(../images/HCM-bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*
+ * Base structure
+ */
+
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+
+/*
+ * Top navigation
+ * Hide default border to remove 1px line.
+ */
+
+.navbar-fixed-top {
+    border: 0;
+}
+
+
+/*
+ * Sidebar
+ */
+
+
+/* Hide for mobile, show later */
+
+.sidebar {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        position: fixed;
+        top: 44px;
+        bottom: 0;
+        right: 0;
+        z-index: 1031;
+        display: block;
+        padding: 20px;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #fff;
+        box-shadow: -2px 2px 4px rgba(0, 0, 0, .15);
+        -webkit-box-shadow: -2px 2px 4px rgba(0, 0, 0, .15);
+        /*width: 260px;*/
+        /* Scrollable contents if viewport is shorter than content. */
+        /*border-right: 1px solid #eee;*/
+    }
+}
+
+.nav-sidebar {
+    margin-right: -20px;
+    /* 20px padding + 1px border */
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+.nav-sidebar > li > a {
+    padding-right: 20px;
+    padding-left: 20px;
+    border-top: 1px solid #F0EAE8;
+    border-bottom: 1px solid #F0EAE8;
+    color: #898787;
+    font-size: 15px;
+}
+
+.nav-sidebar > .active > a,
+.nav-sidebar > .active > a:hover,
+.nav-sidebar > .active > a:focus {
+    color: #D8EFFA;
+    background-color: #27b1f1;
+}
+
+.nav-sidebar > li > a:hover {
+    color: #cfeefc;
+    background-color: #b7e5fa;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+    /*padding: 20px;*/
+    height: 100vh;
+}
+
+@media (min-width: 768px) {
+    .main {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+}
+
+.main .page-header {
+    margin-top: 0;
+}
+
+
+/*
+ * Placeholder dashboard ideas
+ */
+
+.placeholders {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.placeholders h4 {
+    margin-bottom: 0;
+}
+
+.placeholder {
+    margin-bottom: 20px;
+}
+
+.placeholder img {
+    display: inline-block;
+    border-radius: 50%;
+}
+
+
+/* =============
+   Overide Bootstrap
+============= */
+
+.navbar {
+    min-height: 44px;
+    height: 44px;
+}
+
+.navbar-brand {
+    height: 44px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.navbar-text {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.navbar-default {
+    background-color: #fff;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .15);
+    border-radius: 0px;
+    /*border-top: 3px solid #71b6f9;*/
+}
+
+.navbar-brand > span {
+    font-family: 'Comfortaa', cursive;
+}
+
+.navbar-brand > span.b-navbar-logo {
+    font-size: 2em;
+}
+
+.navbar-brand > span.b-navbar-brand {
+    font-size: 1em;
+}
+
+.b-channel-list-btn {
+    margin-right: 20px;
+}
+
+.b-channel-list-btn > span.navbar-text > i.fa {
+    font-size: 17px;
+}
+
+.b-row.row,
+.b-row.form-group {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+
+/* =============
+   End Overide Bootstrap
+============= */
+
+
+/**
+ * Channel content
+ */
+
+.b-card {
+    /*min-width: 500px;*/
+    width: 600px;
+    height: 90%;
+    background: #fff;
+    border: 1px solid #d8d8d8;
+    position: relative;
+}
+
+.b-card-header {
+    height: 80px;
+    width: 100%;
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.b-card-header-avt {
+    width: 60px;
+    height: 60px;
+}
+
+.b-card-header-avt > img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+}
+
+.b-card-content {
+    width: 100%;
+    height: 75%;
+    padding-top: 20px;
+    padding-right: 5px;
+    padding-bottom: 20px;
+    padding-left: 5px;
+    overflow-y: auto;
+}
+
+.b-msg {
+    margin-top: 20px;
+}
+
+.b-msg:first-child {
+    margin-top: 0;
+}
+
+.b-msg > .b-avt > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+.b-msg.b-msg-left *,
+.b-msg.b-msg-right * {
+    margin-left: 10px;
+    /*height: 40px;*/
+}
+
+.b-msg.b-msg-left *:first-child {
+    margin-left: 0;
+}
+
+.b-msg.b-msg-left > * {
+    float: left;
+}
+
+.b-msg.b-msg-right > * {
+    float: right;
+}
+
+.b-msg > .b-msg-content,
+.b-msg > .b-msg-time {
+    padding: 10px;
+}
+
+.b-msg > .b-msg-time {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.b-msg > .b-msg-content {
+    color: #fff;
+    border-radius: 10px;
+    max-width: 80%;
+}
+
+.b-msg.b-msg-left > .b-msg-content {
+    background: #828282;
+}
+
+.b-msg.b-msg-right > .b-msg-content {
+    background: -webkit-linear-gradient(top, #4387fd, #4683ea);
+}
+
+.b-msg-f {
+    background-color: #f5f5f5;
+    border-style: solid;
+    border-width: 1px 0 1px 0;
+    border-color: #d8d8d8;
+    height: auto;
+    padding: 20px 20px 20px 20px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.b-msg-f > div {
+    margin-top: 5px;
+}
+
+.b-msg-f > div:first-child {
+    margin-top: 0;
+}
+
+.b-msg-f .b-msg-ipt textarea {
+    resize: none;
+}
+
+.b-msg-f .b-opt-btn button {
+    float: right;
+}
+
+
+/**
+ *
+ */
+
+.b-no-pad {
+    padding: 0;
+}
+
+.b-main-side {
+    margin-top: 50px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.fs-10 {
+    font-size: 10em;
+}
+
+.fs-15 {
+    font-size: 15em;
+}
+
+.mar-top-7em {
+    margin-top: 7em;
+}
+
+.b-scroll { overflow-y:scroll; }
+.b-scroll::-webkit-scrollbar { width: 5px; }
+.b-scroll::-webkit-scrollbar-track { background-color: rgba(234, 234, 234, 0); }
+.b-scroll::-webkit-scrollbar-thumb { background-color: rgba(0, 0, 0, 0.2); border-radius: 5px; }
+.b-scroll::-webkit-scrollbar-thumb:hover {background-color: rgba(0, 0, 0, 0.4); }
